@@ -27,6 +27,8 @@ func (m *StreamManager[T]) Add(stream grpc.ServerStream) {
 }
 
 func (m *StreamManager[T]) Send(value T) {
+	m.lock.Lock()
+	defer m.lock.Unlock()
 	for _, s := range m.streams {
 		s.SendMsg(value)
 	}
