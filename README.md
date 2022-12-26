@@ -1,3 +1,3 @@
 ## grpc boot
 
-> a tiny package that provides a convenient way to get set up with a grpcweb server.
+> a tiny package that provides a convenient way to set up a grpcweb server.
